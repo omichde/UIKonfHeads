@@ -16,7 +16,12 @@
 #endif
 
 #define kServerURL @"http://app.werk01.de/uikonfheads/"
+#ifdef 0
+#define kInfoFileName @"info_om.json"
+#else
 #define kInfoFileName @"info.json"
+#endif
+
 #define kServerTimeout (30)
 #define UPDATE_LIMIT (-60*60*24)
 
