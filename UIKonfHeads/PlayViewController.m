@@ -88,7 +88,7 @@
 	int headCounter = [[NSUserDefaults standardUserDefaults] integerForKey:@"headCounter"];
 	int headCorrect = [[NSUserDefaults standardUserDefaults] integerForKey:@"headCorrect"];
 	if (headCounter)
-		self.title = [NSString stringWithFormat:@"Index: %.0f%%", 100.0 * (float)headCorrect / (float)headCounter];
+		self.title = [NSString stringWithFormat:@"Index: %.0f%%", 100.0 * (headCorrect/(float)kCountdown) / (float)headCounter];
 	else
 		self.title = @"0%";
 }
@@ -135,7 +135,7 @@
 	[defaults setInteger:1+[defaults integerForKey:@"headCounter"] forKey:@"headCounter"];
 	if (index == _correctGuessIndex) {
 		[_rightSound play];
-		[defaults setInteger:1+[defaults integerForKey:@"headCorrect"] forKey:@"headCorrect"];
+		[defaults setInteger:[defaults integerForKey:@"headCorrect"]+_timer forKey:@"headCorrect"];
 	}
 	else
 		[_lostSound play];

@@ -11,7 +11,7 @@
 #import "Twitter/Twitter.h"
 
 @interface IntroViewController ()
-
+@property (assign, nonatomic) int headCounter;
 @end
 
 @implementation IntroViewController
@@ -24,7 +24,8 @@
 	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
  	NSString *infoFileName = [[paths objectAtIndex:0] stringByAppendingPathComponent: kInfoFileName];
 	NSArray *headList = [NSJSONSerialization JSONObjectWithData: [NSData dataWithContentsOfFile:infoFileName] options:0 error:nil];
-	_textView.text = [NSString stringWithFormat: _textView.text, headList.count];
+	_headCounter = headList.count;
+	_textView.text = [NSString stringWithFormat: _textView.text, _headCounter];
 	if (!headList.count)
 		_startButton.hidden = YES;
 }
@@ -35,7 +36,7 @@
 	int headCounter = [[NSUserDefaults standardUserDefaults] integerForKey:@"headCounter"];
 	int headCorrect = [[NSUserDefaults standardUserDefaults] integerForKey:@"headCorrect"];
 	if (headCounter)
-		_indexView.text = [NSString stringWithFormat:@"%.0f%%", 100.0 * (float)headCorrect / (float)headCounter];
+		_indexView.text = [NSString stringWithFormat:@"%.0f%%", 100.0 * (headCorrect/(float)kCountdown) / (float)headCounter];
 	else
 		_indexView.text = @"0%";
 }
@@ -55,7 +56,7 @@
 	else {
 		int headCounter = [[NSUserDefaults standardUserDefaults] integerForKey:@"headCounter"];
 		int headCorrect = [[NSUserDefaults standardUserDefaults] integerForKey:@"headCorrect"];
-		NSString *message = [NSString stringWithFormat: @"My \"Heads Index\" is %.0f%% for #UIKonf", 100.0 * (float)headCorrect / (float)headCounter];
+		NSString *message = [NSString stringWithFormat: @"My \"Heads Index\" is %.0f%% at %d heads for #UIKonf", 100.0 * (headCorrect/(float)kCountdown) / (float)headCounter, _headCounter];
 		TWTweetComposeViewController *twitterViewController = [[TWTweetComposeViewController alloc] init];
 		[twitterViewController setInitialText: message];
 		[self presentModalViewController:twitterViewController animated:YES];

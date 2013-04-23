@@ -79,6 +79,7 @@
 				});
 			});
 		} failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+			DLog(@"FAIL %@ %@", error.localizedDescription, error.userInfo)
 			dispatch_async(dispatch_get_main_queue(), ^{
 				[self proceed];
 			});
