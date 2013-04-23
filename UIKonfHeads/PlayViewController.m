@@ -123,8 +123,6 @@
 	_sysTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(update) userInfo:nil repeats: YES];
 	_bgSound.currentTime = 0.0;
 	[_bgSound play];
-
-//	[UIView transitionFromView:viewHot toView:viewCold duration:kDuration options:UIViewAnimationOptionTransitionFlipFromLeft completion:nil];
 }
 
 - (void) end:(int) index {
@@ -203,6 +201,7 @@
 }
 
 - (IBAction) next {
+	//	[UIView transitionFromView:viewHot toView:viewCold duration:kDuration options:UIViewAnimationOptionTransitionFlipFromLeft completion:nil];
 	[UIView animateWithDuration:kDuration animations:^{
 		_nextButton.alpha = 0;
 	} completion:^(BOOL finished) {

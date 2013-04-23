@@ -103,25 +103,25 @@
 }
 
 - (IBAction) webstart {
-	[self loadWebView: [NSURL URLWithString:@"http://www.uikonf.com"] withTitle:@"UIKonf"];
+	[self loadWebView: @"http://www.uikonf.com" withTitle:@"UIKonf"];
 }
 
 - (IBAction) program {
-	[self loadWebView: [NSURL URLWithString:@"http://www.uikonf.com/program.html"] withTitle:@"Program"];
+	[self loadWebView: @"http://www.uikonf.com/program.html" withTitle:@"Program"];
 }
 
 - (IBAction) tickets {
-	[self loadWebView: [NSURL URLWithString:@"http://tickets.uikonf.com/"] withTitle:@"Tickets"];
+	[self loadWebView: @"http://tickets.uikonf.com/" withTitle:@"Tickets"];
 }
 
 - (IBAction) venue {
-	[self loadWebView: [NSURL URLWithString:@"http://www.uikonf.com/venue.html"] withTitle:@"Venue"];
+	[self loadWebView: @"http://www.uikonf.com/venue.html" withTitle:@"Venue"];
 }
 
-- (void) loadWebView:(NSURL*) url withTitle:(NSString*) title {
+- (void) loadWebView:(NSString*) urlString withTitle:(NSString*) title {
 	WebViewController *webVC = [[WebViewController alloc] initWithNibName:@"WebViewController" bundle:nil];
 	webVC.title = title;
-	webVC.url = url;
+	webVC.url = [NSURL URLWithString: urlString];
 	[self.navigationController pushViewController: webVC animated:YES];
 }
 

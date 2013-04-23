@@ -1,10 +1,10 @@
 # UIKonfHeads
 
-Memorizing code is easier for me than photos or faces of people, so I've created a little game for the upcoming [UIKonf](http://www.uikonf.com) conference: guess which name corresponds to a person attending the upcoming UIKonf 2013. Bear with me this is a small APP created on one afternoon (with the help of some code used in [QuizDeluxe](http://www.quizdeluxe.de).
+Memorizing code is easier for me than assigning names to photos or faces of people, so I've created a little game for the upcoming [UIKonf](http://www.uikonf.com) conference: guess which name corresponds to a person attending the upcoming UIKonf 2013. Bear with me this is a small APP created on one afternoon (with the help of some code used in [QuizDeluxe](http://www.quizdeluxe.de). You can twitter your "Heads Index" or to any person listed.
 
 ## Installation & Usage
 
-Download the repository, open XCode (uses new objective-c literals), compile and run on your device. The APP currently loads a JSON info file from my server once a day with a list of attendees (name, twitter-account), finally it loads images from their respective image owners to be displayed within the APP. [AFNetworking](https://github.com/AFNetworking/AFNetworking) is used for JSON and image downloading.
+Download the repository, open up2date XCode, compile and run on your device (iOS 5+). The APP currently loads a JSON info file from my server once a day with a list of attendees (name, twitter-account), finally it loads images from their respective image owners to be displayed within the APP. [AFNetworking](https://github.com/AFNetworking/AFNetworking) is used for JSON and image downloading.
 
 ## Contact
 
