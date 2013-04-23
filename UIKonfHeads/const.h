@@ -16,7 +16,11 @@
 #endif
 
 #define kServerURL @"http://app.werk01.de/uikonfheads/"
+<<<<<<< HEAD
 #ifdef private
+=======
+#ifdef 0
+>>>>>>> 3a5bb696b3082bd438ef268018a1f410f01cf0e7
 #define kInfoFileName @"info_om.json"
 #else
 #define kInfoFileName @"info.json"
