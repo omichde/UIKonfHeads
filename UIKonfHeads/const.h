@@ -16,14 +16,10 @@
 #endif
 
 #define kServerURL @"http://app.werk01.de/uikonfheads/"
-#ifdef private
-#define kInfoFileName @"info_om.json"
-#else
 #define kInfoFileName @"info.json"
-#endif
 
 #define kServerTimeout (30)
-#define UPDATE_LIMIT (-60*60*24)
+#define UPDATE_LIMIT (-60*60*2)	// every 2 hours...
 
 #define kDuration (0.3)
 #define kMinHeadCounter (10)
