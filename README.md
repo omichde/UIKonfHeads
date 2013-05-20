@@ -1,6 +1,6 @@
 # UIKonfHeads
 
-Memorizing code is easier for me than assingning names to photos or faces of people, so I've created a little game for the upcoming [UIKonf](http://www.uikonf.com) conference: guess which name corresponds to a person attending the upcoming UIKonf 2013. Bear with me this is a small APP created on one afternoon (with the help of some code used in [QuizDeluxe](http://www.quizdeluxe.de). You can twitter your "Heads Index" or to any person listed.
+Memorizing code is easier for me than assingning names to photos or faces of people, so I've created a little game for the upcoming [UIKonf](http://www.uikonf.com) conference: guess which name corresponds to a person attending the upcoming UIKonf 2013. Bear with me this is a small APP created on one afternoon (with the help of some code used in [QuizDeluxe](http://www.quizdeluxe.de)). You can twitter your "Heads Index" or to any person listed.
 
 ## Installation & Usage
 
