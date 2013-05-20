@@ -4,14 +4,17 @@ Memorizing code is easier for me than assingning names to photos or faces of peo
 
 ## Installation & Usage
 
-Download the repository, open up2date XCode, compile and run on your device (iOS 5+). The APP currently loads a JSON info file from my server once a day with a list of attendees (name, twitter-account), finally it loads images from their respective image owners to be displayed within the APP. [AFNetworking](https://github.com/AFNetworking/AFNetworking) is used for JSON and image downloading.
+Download the repository, open XCode, compile and run on your device (iOS 5+). The APP currently loads a JSON info file from my server every two hours with a list of attendees (name, twitter-account), finally it loads images from their respective image owners to be displayed within the APP. [AFNetworking](https://github.com/AFNetworking/AFNetworking) is used for JSON and image downloading.
 
 ## Contact
 
-@omichde - Oliver Michalak - oliver@werk01.de
+Oliver Michalak - [oliver@werk01.de](mailto:oliver@werk01.de) - [@omichde](http://twitter.com/omichde)
+
+## Keywords
+
+UIKonf, iOS, Game, Faces, Names
 
 ## License
-
 
 UIKonfHeads is available under the MIT license:
 
